@@ -1,0 +1,17 @@
+doctype html
+
+html
+  head
+    title Main
+    script(src='https://unpkg.com/htmx.org@2.0.3')
+    link(rel='stylesheet', href='/assets/main.css')
+  body
+    block body
+
+    script.
+        const themeSwitchers = document.querySelectorAll('.theme-switcher');
+        themeSwitchers.forEach(button => {
+            button.addEventListener('click', function (e) {
+                document.documentElement.setAttribute('data-theme', button.dataset.theme)
+            });
+        });

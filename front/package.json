@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "npx tailwindcss -i src/main.css -o ../public/assets/main.css",
+    "watch-css": "npm run build-css -- --watch",
+    "watch-browser": "browser-sync start  --no-open --proxy 'localhost:3000' --port 3001 --ui-port 3002 --reload-delay 2000 --files '../public/**/*.css' '../templates/**/*.pug' '../**/*.go'  '../**/*.html' "
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "daisyui": "^4.12.13",
+    "tailwindcss": "^3.4.14"
+  }
+}
+
+
